@@ -1,14 +1,13 @@
 class CalcController {
 
-    constructor(){
-        // Codigo temporario da Aula 20. Vi as aulas em casa, fiz os métodos e anotei tudo certinho mas esqueci de commitar, tá salvo so no meu PC, vou atualizar assim que chegar em casa.
-        this._lastOperator = '';
+    constructor(){ // Inicia os atributos e funções
+        
         this._lastNumber = '';
 
         this._audio = new Audio('click.mp3'); // Essa classe Audio é de uma webAPI, não é nativa do JS
         this._audioOnOff = false;
 
-        this._operation = [];
+        this._operation = []; // Inicia os atributos e funções
         this._locale = 'pt-BR';
         this._displayCalcEl = document.querySelector("#display");
         this._dateEl = document.querySelector("#data");
@@ -48,8 +47,8 @@ class CalcController {
  
     }
 
-    initialize(){
-
+    initialize(){ // Inicia esses métodos no carregar da página
+        
         this.setDisplayDateTime()
 
         setInterval(()=>{
